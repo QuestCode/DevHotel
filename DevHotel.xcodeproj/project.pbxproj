@@ -15,6 +15,7 @@
 		2198D3D11FE8614900A0F4A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2198D3CF1FE8614900A0F4A2 /* LaunchScreen.storyboard */; };
 		2198D3DC1FE8614900A0F4A2 /* DevHotelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198D3DB1FE8614900A0F4A2 /* DevHotelTests.swift */; };
 		2198D3E71FE8614900A0F4A2 /* DevHotelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198D3E61FE8614900A0F4A2 /* DevHotelUITests.swift */; };
+		2198D3F51FE8616C00A0F4A2 /* StructFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198D3F41FE8616C00A0F4A2 /* StructFiles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2198D3E21FE8614900A0F4A2 /* DevHotelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevHotelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2198D3E61FE8614900A0F4A2 /* DevHotelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevHotelUITests.swift; sourceTree = "<group>"; };
 		2198D3E81FE8614900A0F4A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2198D3F41FE8616C00A0F4A2 /* StructFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructFiles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		2198D3C21FE8614900A0F4A2 /* DevHotel */ = {
 			isa = PBXGroup;
 			children = (
+				2198D3F41FE8616C00A0F4A2 /* StructFiles.swift */,
 				2198D3C31FE8614900A0F4A2 /* AppDelegate.swift */,
 				2198D3C51FE8614900A0F4A2 /* ViewController.swift */,
 				2198D3C71FE8614900A0F4A2 /* Main.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2198D3F51FE8616C00A0F4A2 /* StructFiles.swift in Sources */,
 				2198D3C61FE8614900A0F4A2 /* ViewController.swift in Sources */,
 				2198D3CC1FE8614900A0F4A2 /* DevHotel.xcdatamodeld in Sources */,
 				2198D3C41FE8614900A0F4A2 /* AppDelegate.swift in Sources */,
