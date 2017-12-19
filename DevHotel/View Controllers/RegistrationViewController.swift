@@ -8,11 +8,17 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UITableViewController {
     
+    let cellID = "registrationCell"
+    
+    var registrations = [Registration]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Registrations"
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addRegistration(_:)))
         
     }
     
@@ -21,24 +27,29 @@ class RegistrationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @objc func addRegistration(_ : UIBarButtonItem) {
+        self.navigationController?.pushViewController(AddRegistrationTableViewController(), animated: true)
+    }
     
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        
+        let registration = registrations[indexPath.row]
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        
+        cell.textLabel?.text = registration.firstName + " " + registration.lastName
+        cell.detailTextLabel?.text = dateFormatter.string(from: registration.checkInDate) + " - " + dateFormatter.string(from: registration.checkOutDate) + ": " + registration.roomType.name
+        
+        return cell
+    }
     
 }
 
 
-//extension ViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        <#code#>
-//    }
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//}
+
 
 
 extension UIView {

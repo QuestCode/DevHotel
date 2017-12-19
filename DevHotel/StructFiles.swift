@@ -10,7 +10,7 @@ import Foundation
 
 struct Registration {
     let firstName: String
-    let lastNamt: String
+    let lastName: String
     let email: String
     
     let checkInDate: Date
@@ -27,6 +27,10 @@ struct RoomType: Equatable {
     let name: String
     let shortName: String
     let price: Int
+    
+    static var all: [RoomType] {
+        return [RoomType(id: 0, name: "Single Twin", shortName: "ST", price: 150),RoomType(id: 1, name: "Double Twin", shortName: "DDQ", price: 180),RoomType(id: 2, name: "Double Queen", shortName: "DQ", price: 220),RoomType(id: 3, name: "Double Double Queen", shortName: "DDQ", price: 290)]
+    }
 }
 
 // Equatable protocal implementation for RoomType
