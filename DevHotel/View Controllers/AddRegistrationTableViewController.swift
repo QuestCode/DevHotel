@@ -270,6 +270,7 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
         cell.selectionStyle = .none
+        cell.backgroundColor = .white
         
         switch (indexPath.section,indexPath.row) {
         case (firstNameCellIndexPath.section,firstNameCellIndexPath.row):
@@ -352,6 +353,8 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
             break
         default:
             cell.backgroundColor = UIColor(displayP3Red: 215/255, green: 222/255, blue: 232/255, alpha: 1.0)
+            cell.textLabel?.text = ""
+            cell.detailTextLabel?.text = ""
             break
         }
         
