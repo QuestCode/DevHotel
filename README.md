@@ -1,9 +1,9 @@
 # DevHotel
 
-** This project is a hotel registration app **
+**This project is a hotel registration app**
 
 
-* Code below in use to present app with Interface Builder *
+*Code below in use to present app with Interface Builder*
 ```Swift
 let navController = UINavigationController(rootViewController: RegistrationViewController())
         self.window = UIWindow(frame: UIScreen.main.bounds)
