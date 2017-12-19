@@ -31,6 +31,13 @@ class RegistrationViewController: UITableViewController {
         self.navigationController?.pushViewController(AddRegistrationTableViewController(), animated: true)
     }
     
+    func unwindFromAddRegistration() {
+        let addRegistratioTVC = AddRegistrationTableViewController()
+        guard let registration = addRegistratioTVC.registration else { return }
+        registrations.append(registration)
+        tableView.reloadData()
+        self.navigationController?.popViewController(animated: true)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)

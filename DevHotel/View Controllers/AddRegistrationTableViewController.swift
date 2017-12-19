@@ -101,8 +101,23 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     }()
     
     var roomType: RoomType?
+    var registration: Registration? {
+        guard let roomType = roomType else { return nil }
+        
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
+        let numOfAdults = Int(numberOfAdultsStepper.value)
+        let numOfChildren = Int(numberOfChildrenStepper.value)
+        let wifiWanted = wifiSwitch.isOn
+        
+        return Registration(firstName: firstName, lastName: lastName, email: email, checkInDate: checkInDate, checkOutDate: checkOutDate, numberOfAdults: numOfAdults, numberOfChildren: numOfChildren, roomType: roomType, wifi: wifiWanted)
+        
+    }
     
-    
+    // MARK: INDEX PATHS
     let firstNameCellIndexPath = IndexPath(row: 1, section: 0)
     let lastNameCellIndexPath = IndexPath(row: 2, section: 0)
     let emailCellIndexPath = IndexPath(row: 3, section: 0)
@@ -208,17 +223,9 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     
     
     @objc func doneButtonTapped(_ sender: UIBarButtonItem) {
-        let firstName = firstNameTextField.text ?? ""
-        let lastName = lastNameTextField.text ?? ""
-        let email = emailTextField.text ?? ""
-        let checkInDate = checkInDatePicker.date
-        let checkOutDate = checkOutDatePicker.date
-        let numOfAdults = Int(numberOfAdultsStepper.value)
-        let numOfChildren = Int(numberOfChildrenStepper.value)
-        let wifiWanted = wifiSwitch.isOn
-        let roomChoice = roomType?.name
         
-        print("First Name: \(firstName)\nLast Name: \(lastName)\nEmail: \(email)\nCheck-In: \(checkInDate)\nCheck-Out: \(checkOutDate)\nNum Of Adults: \(numOfAdults)\nNum Of Children: \(numOfChildren)\nWi-Fi: \(wifiWanted)\nRoom Choice: \(String(describing: roomChoice))")
+        
+//        print("First Name: \(firstName)\nLast Name: \(lastName)\nEmail: \(email)\nCheck-In: \(checkInDate)\nCheck-Out: \(checkOutDate)\nNum Of Adults: \(numOfAdults)\nNum Of Children: \(numOfChildren)\nWi-Fi: \(wifiWanted)\nRoom Choice: \(String(describing: roomChoice?.name))")
         
     }
     
