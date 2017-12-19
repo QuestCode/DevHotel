@@ -12,7 +12,7 @@
 
 *New Registration Page*
 
-<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/New_Registration_Page.png" width="250">
+<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/New_Registration_page.png" width="250">
 
 *Room Type Page*
 
