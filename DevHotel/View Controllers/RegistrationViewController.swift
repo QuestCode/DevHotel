@@ -12,7 +12,12 @@ class RegistrationViewController: UITableViewController {
     
     let cellID = "registrationCell"
     
-    var registrations = [Registration(firstName: "Larry", lastName: "Jones", email: "lj12@gmail.com", checkInDate: Date(), checkOutDate: Date().addingTimeInterval(TimeInterval(4*(24*60*60))), numberOfAdults: 2, numberOfChildren: 1, roomType: RoomType(id: 2, name: "Double Queen", shortName: "DQ", price: 220), wifi: true),Registration(firstName: "Amber", lastName: "Johnson", email: "aj1234@gmail.com", checkInDate: Date().addingTimeInterval(TimeInterval(4*(24*60*60))), checkOutDate: Date().addingTimeInterval(TimeInterval(7*(24*60*60))), numberOfAdults: 2, numberOfChildren: 1, roomType: RoomType(id: 2, name: "Double Queen", shortName: "DQ", price: 220), wifi: false),Registration(firstName: "Carson", lastName: "Wentz", email: "cjwentz11@gmail.com", checkInDate: Date().addingTimeInterval(TimeInterval(1*(24*60*60))), checkOutDate: Date().addingTimeInterval(TimeInterval(7*(24*60*60))), numberOfAdults: 2, numberOfChildren: 0, roomType: RoomType(id: 7, name: "Penthouse Suite", shortName: "PHS", price: 1110), wifi: true)]
+    var registrations = [
+        Registration(firstName: "Larry", lastName: "Jones", email: "lj12@gmail.com", checkInDate: Date(), checkOutDate: Date().addingTimeInterval(TimeInterval(4*(24*60*60))), numberOfAdults: 2, numberOfChildren: 1, roomType: RoomType(id: 2, name: "Double Queen", shortName: "DQ", price: 220), wifi: true),
+        Registration(firstName: "Amber", lastName: "Johnson", email: "aj1234@gmail.com", checkInDate: Date().addingTimeInterval(TimeInterval(4*(24*60*60))), checkOutDate: Date().addingTimeInterval(TimeInterval(7*(24*60*60))), numberOfAdults: 2, numberOfChildren: 1, roomType: RoomType(id: 2, name: "Double Queen", shortName: "DQ", price: 220), wifi: false),
+        Registration(firstName: "Carson", lastName: "Wentz", email: "cjwentz11@gmail.com", checkInDate: Date().addingTimeInterval(TimeInterval(1*(24*60*60))), checkOutDate: Date().addingTimeInterval(TimeInterval(7*(24*60*60))), numberOfAdults: 2, numberOfChildren: 0, roomType: RoomType(id: 7, name: "Penthouse Suite", shortName: "PHS", price: 1110), wifi: true),
+        Registration(firstName: "Aaron", lastName: "Rodgers", email: "ar12@gmail.com", checkInDate: Date(), checkOutDate: Date().addingTimeInterval(TimeInterval(7*(24*60*60))), numberOfAdults: 2, numberOfChildren: 0, roomType: RoomType(id: 7, name: "Penthouse Suite", shortName: "PHS", price: 1110), wifi: true)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
