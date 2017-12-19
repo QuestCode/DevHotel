@@ -10,7 +10,7 @@
 
 <img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/Registrations_Page.png" width="250">
 
-*Registration Page*
+*New Registration Page*
 
 <img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/New_Registration_Page.png" width="250">
 
