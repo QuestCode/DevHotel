@@ -29,7 +29,7 @@ struct RoomType: Equatable {
     let price: Int
     
     static var all: [RoomType] {
-        return [RoomType(id: 0, name: "Single Twin", shortName: "ST", price: 150),RoomType(id: 1, name: "Double Twin", shortName: "DDQ", price: 180),RoomType(id: 2, name: "Double Queen", shortName: "DQ", price: 220),RoomType(id: 3, name: "Double Double Queen", shortName: "DDQ", price: 290)]
+        return [RoomType(id: 0, name: "Single Twin", shortName: "ST", price: 150),RoomType(id: 1, name: "Double Twin", shortName: "DDQ", price: 180),RoomType(id: 2, name: "Double Queen", shortName: "DQ", price: 220),RoomType(id: 3, name: "Double Double Queen", shortName: "DDQ", price: 290),RoomType(id: 4, name: "Interconnecting Room", shortName: "IR", price: 340),RoomType(id: 5, name: "Adjoining Room", shortName: "AR", price: 340),RoomType(id: 6, name: "Cabana", shortName: "C", price: 440),RoomType(id: 7, name: "Penthouse Suite", shortName: "PHS", price: 1110)]
     }
 }
 
