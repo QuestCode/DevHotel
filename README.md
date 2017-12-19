@@ -12,6 +12,5 @@ let navController = UINavigationController(rootViewController: RegistrationViewC
 ```
 
 ** App Images **
-![AddRegistrationViewController]
 
-(https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/Registration_Page.png)
+![AddRegistrationViewController](https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/Registration_Page.png)
