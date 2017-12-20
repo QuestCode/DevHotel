@@ -65,6 +65,12 @@ class RegistrationViewController: UITableViewController, AddRegistrationTableVie
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dvc = ChargesTableViewController()
+        dvc.registration = registrations[indexPath.row]
+        self.navigationController?.pushViewController(dvc, animated: true)
+    }
+    
 }
 
 
