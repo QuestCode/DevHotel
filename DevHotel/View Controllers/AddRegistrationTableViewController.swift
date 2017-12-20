@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol AddRegistrationTableViewControllerDelegate {
+    func didAddRegistration(registration: Registration)
+}
+
 class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
+    
+    // This is used to pass data back VC
+    var delegate: AddRegistrationTableViewControllerDelegate?
     
     let firstNameTextField: UITextField = {
         let textfield = UITextField()
@@ -221,12 +228,11 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         updateRoomType()
     }
     
-    
+    // Implementation of doneButtonTapped
+    // Need to pass data backward VC
     @objc func doneButtonTapped(_ sender: UIBarButtonItem) {
-        
-        
-//        print("First Name: \(firstName)\nLast Name: \(lastName)\nEmail: \(email)\nCheck-In: \(checkInDate)\nCheck-Out: \(checkOutDate)\nNum Of Adults: \(numOfAdults)\nNum Of Children: \(numOfChildren)\nWi-Fi: \(wifiWanted)\nRoom Choice: \(String(describing: roomChoice?.name))")
-        
+        delegate?.didAddRegistration(registration: registration!)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

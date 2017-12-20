@@ -8,8 +8,8 @@
 
 import UIKit
 
-class RegistrationViewController: UITableViewController {
-    
+class RegistrationViewController: UITableViewController, AddRegistrationTableViewControllerDelegate {
+
     let cellID = "registrationCell"
     
     var registrations = [
@@ -33,15 +33,16 @@ class RegistrationViewController: UITableViewController {
     }
     
     @objc func addRegistration(_ : UIBarButtonItem) {
-        self.navigationController?.pushViewController(AddRegistrationTableViewController(), animated: true)
+        // Need to make destination View Controller delegate to this vc
+        // This is needed to pass data backward views
+        let dvc = AddRegistrationTableViewController()
+        dvc.delegate = self
+        self.navigationController?.pushViewController(dvc, animated: true)
     }
     
-    func unwindFromAddRegistration() {
-        let addRegistratioTVC = AddRegistrationTableViewController()
-        guard let registration = addRegistratioTVC.registration else { return }
-        registrations.append(registration)
-        tableView.reloadData()
-        self.navigationController?.popViewController(animated: true)
+    func didAddRegistration(registration: Registration) {
+        self.registrations.append(registration)
+        self.tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
