@@ -2,7 +2,7 @@
 
 **This project is a hotel registration app**
 
-<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/Dev_Hotel.gif" width="250">
+<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/updated_Dev_Hotel.gif" width="250">
 
 **App Images**
 
