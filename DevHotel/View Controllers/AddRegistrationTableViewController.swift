@@ -78,18 +78,22 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     
     let numberOfAdultsStepper: UIStepper = {
         let stepper = UIStepper()
+        stepper.tintColor = UIColor(rgb: 0x39b6d6)
         stepper.translatesAutoresizingMaskIntoConstraints = false
         return stepper
     }()
     
     let numberOfChildrenStepper: UIStepper = {
         let stepper = UIStepper()
+        stepper.tintColor = UIColor(rgb: 0x39b6d6)
         stepper.translatesAutoresizingMaskIntoConstraints = false
         return stepper
     }()
     
     let wifiSwitch: UISwitch = {
         let switcher = UISwitch()
+        switcher.tintColor = UIColor(rgb: 0x39b6d6)
+        switcher.onTintColor = UIColor(rgb: 0x39b6d6)
         switcher.translatesAutoresizingMaskIntoConstraints = false
         return switcher
     }()
@@ -231,8 +235,12 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     // Implementation of doneButtonTapped
     // Need to pass data backward VC
     @objc func doneButtonTapped(_ sender: UIBarButtonItem) {
-        delegate?.didAddRegistration(registration: registration!)
-        self.navigationController?.popViewController(animated: true)
+        if let registration = registration {
+            delegate?.didAddRegistration(registration: registration)
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

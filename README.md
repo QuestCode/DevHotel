@@ -8,7 +8,7 @@
 
 *Registration Page*
 
-<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/Registrations_Page.png" width="250">
+<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/Registrations_Page1.0.1.png" width="250">
 
 *New Registration Page*
 

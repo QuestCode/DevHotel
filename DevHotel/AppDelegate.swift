@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let navController = UINavigationController(rootViewController: RegistrationViewController())
+        navController.navigationBar.barTintColor = UIColor(rgb: 0x39b6d6)
+        navController.navigationBar.tintColor = .white
+        navController.navigationBar.barStyle = .blackTranslucent
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navController
         self.window?.makeKeyAndVisible()
