@@ -38,3 +38,10 @@ extension UIView {
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
     }
 }
+
+extension UIImageView {
+    func renderImage(image: UIImage,color: UIColor) {
+        self.image = image.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        self.tintColor = color
+    }
+}

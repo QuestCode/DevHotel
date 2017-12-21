@@ -86,21 +86,21 @@ class RegistrationsTableViewCell: UITableViewCell {
     let guestNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Copperplate-Bold", size: 26)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 24)
         return label
     }()
     
     let dateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Copperplate", size: 14)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 14)
         return label
     }()
     
     let roomTypeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Copperplate", size: 14)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 14)
         return label
     }()
     

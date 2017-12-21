@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210943DF1FEB62B4007573B9 /* FlashyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210943DE1FEB62B4007573B9 /* FlashyTextField.swift */; };
 		214715F91FE99E4B00D0E83E /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214715F61FE99E4B00D0E83E /* AddRegistrationTableViewController.swift */; };
 		214715FA1FE99E4B00D0E83E /* SelectRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214715F71FE99E4B00D0E83E /* SelectRoomTableViewController.swift */; };
 		214715FB1FE99E4B00D0E83E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214715F81FE99E4B00D0E83E /* RegistrationViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		210943DE1FEB62B4007573B9 /* FlashyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashyTextField.swift; sourceTree = "<group>"; };
 		214715F61FE99E4B00D0E83E /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
 		214715F71FE99E4B00D0E83E /* SelectRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRoomTableViewController.swift; sourceTree = "<group>"; };
 		214715F81FE99E4B00D0E83E /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		210943DD1FEB626B007573B9 /* UI Designs */ = {
+			isa = PBXGroup;
+			children = (
+				210943DE1FEB62B4007573B9 /* FlashyTextField.swift */,
+			);
+			path = "UI Designs";
+			sourceTree = "<group>";
+		};
 		214715F51FE99E2B00D0E83E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		2198D3C21FE8614900A0F4A2 /* DevHotel */ = {
 			isa = PBXGroup;
 			children = (
+				210943DD1FEB626B007573B9 /* UI Designs */,
 				2198D3C31FE8614900A0F4A2 /* AppDelegate.swift */,
 				214715F51FE99E2B00D0E83E /* View Controllers */,
 				2198D3F41FE8616C00A0F4A2 /* StructFiles.swift */,
@@ -261,6 +272,7 @@
 				21BF84501FEB242C006C04BC /* Extensions.swift in Sources */,
 				214715F91FE99E4B00D0E83E /* AddRegistrationTableViewController.swift in Sources */,
 				2198D3C41FE8614900A0F4A2 /* AppDelegate.swift in Sources */,
+				210943DF1FEB62B4007573B9 /* FlashyTextField.swift in Sources */,
 				21BF844E1FEB10F2006C04BC /* ChargesTableViewController.swift in Sources */,
 				214715FA1FE99E4B00D0E83E /* SelectRoomTableViewController.swift in Sources */,
 			);

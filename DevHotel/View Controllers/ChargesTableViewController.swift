@@ -16,16 +16,16 @@ class ChargesTableViewController: UITableViewController {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Charges"
+        label.text = "Charges".uppercased()
         label.textAlignment = .center
-        label.font = UIFont(name: "Copperplate", size: 20)
+        label.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 25)
         return label
     }()
     
     let numOfNightsLabel: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Copperplate", size: 20)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
@@ -33,7 +33,7 @@ class ChargesTableViewController: UITableViewController {
         let label = UILabel()
         label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Copperplate", size: 20)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
@@ -41,7 +41,7 @@ class ChargesTableViewController: UITableViewController {
         let label = UILabel()
         label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Copperplate", size: 20)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
@@ -49,7 +49,7 @@ class ChargesTableViewController: UITableViewController {
         let label = UILabel()
         label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Copperplate", size: 20)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
@@ -57,7 +57,7 @@ class ChargesTableViewController: UITableViewController {
         let label = UILabel()
         label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Copperplate", size: 20)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
@@ -65,7 +65,7 @@ class ChargesTableViewController: UITableViewController {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Copperplate", size: 20)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
 
@@ -102,7 +102,7 @@ class ChargesTableViewController: UITableViewController {
         cell.selectionStyle = .none
         let components = Calendar.current.dateComponents([.day], from: (registration?.checkInDate)!, to: (registration?.checkOutDate)!)
         let roomPrice = (registration?.roomType.price)! * components.day!
-        cell.textLabel?.font = UIFont(name: "Copperplate-Bold", size: 20)
+        cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 24)
         
         
         var wifiPrice = 0

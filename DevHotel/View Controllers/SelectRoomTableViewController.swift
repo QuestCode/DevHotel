@@ -44,7 +44,8 @@ class SelectRoomTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         cell = UITableViewCell(style: .value1, reuseIdentifier: cellID)
-
+        cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 24)
+        cell.detailTextLabel?.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         
         let roomType = RoomType.all[indexPath.row]
         

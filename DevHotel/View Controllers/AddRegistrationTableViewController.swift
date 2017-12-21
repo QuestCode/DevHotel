@@ -14,26 +14,29 @@ protocol AddRegistrationTableViewControllerDelegate {
 
 class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
     
-    // This is used to pass data back VC
+    // This is used to pvar data back VC
     var delegate: AddRegistrationTableViewControllerDelegate?
     
-    let firstNameTextField: UITextField = {
-        let textfield = UITextField()
-        textfield.placeholder = "First Name"
+    let firstNameTextField: FlashyTextField = {
+        let textfield = FlashyTextField()
+        textfield.leftImageView?.renderImage(image: UIImage(named: "person.png")!,color: .black)
+        textfield.placeholderWithColor(placeholder: "First Name", color: .black)
         textfield.translatesAutoresizingMaskIntoConstraints = false
         return textfield
     }()
     
     let lastNameTextField: UITextField = {
-        let textfield = UITextField()
-        textfield.placeholder = "Last Name"
+        let textfield = FlashyTextField()
+        textfield.leftImageView?.renderImage(image: UIImage(named: "person.png")!,color: .black)
+        textfield.placeholderWithColor(placeholder: "Last Name", color: .black)
         textfield.translatesAutoresizingMaskIntoConstraints = false
         return textfield
     }()
     
     let emailTextField: UITextField = {
-        let textfield = UITextField()
-        textfield.placeholder = "Email"
+        let textfield = FlashyTextField()
+        textfield.leftImageView?.renderImage(image: UIImage(named: "email.png")!,color: .black)
+        textfield.placeholderWithColor(placeholder: "Email", color: .black)
         textfield.translatesAutoresizingMaskIntoConstraints = false
         return textfield
     }()
@@ -41,12 +44,14 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     let checkInDateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
     let checkOutDateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
@@ -66,6 +71,7 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         let label = UILabel()
         label.text = "Adults"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
@@ -73,6 +79,7 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         let label = UILabel()
         label.text = "Children"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
@@ -102,12 +109,14 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         let label = UILabel()
         label.text = "$ 10"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
     let roomTypeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         return label
     }()
     
@@ -129,9 +138,9 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     }
     
     // MARK: INDEX PATHS
-    let firstNameCellIndexPath = IndexPath(row: 1, section: 0)
-    let lastNameCellIndexPath = IndexPath(row: 2, section: 0)
-    let emailCellIndexPath = IndexPath(row: 3, section: 0)
+    let firstNameCellIndexPath = IndexPath(row: 0, section: 0)
+    let lastNameCellIndexPath = IndexPath(row: 1, section: 0)
+    let emailCellIndexPath = IndexPath(row: 2, section: 0)
 
     let checkInLabelIndexPath = IndexPath(row: 1, section: 1)
     let checkOutLabelIndexPath = IndexPath(row: 3, section: 1)
@@ -184,7 +193,8 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     }
     
     func setUpViews() {
-        self.tableView.backgroundColor = UIColor(displayP3Red: 215/255, green: 222/255, blue: 232/255, alpha: 1.0)
+        self.tableView.backgroundColor = UIColor(rgb: 0x39b6d6)
+        self.tableView.separatorColor = .clear
         checkInDatePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
         checkOutDatePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
         numberOfAdultsStepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
@@ -273,7 +283,7 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         // #warning Incomplete implementation, return the number of rows
         switch section {
         case 0:
-            return 4
+            return 3
         case 1:
             return 5
         case 2:
@@ -292,6 +302,7 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
         cell.selectionStyle = .none
         cell.backgroundColor = .white
+        cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         
         switch (indexPath.section,indexPath.row) {
         case (firstNameCellIndexPath.section,firstNameCellIndexPath.row):
@@ -373,7 +384,7 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
             cell.addConstraintsWithFormat(format: "V:|[v0]|", views: roomTypeLabel)
             break
         default:
-            cell.backgroundColor = UIColor(displayP3Red: 215/255, green: 222/255, blue: 232/255, alpha: 1.0)
+            cell.backgroundColor = UIColor(rgb: 0x39b6d6)
             cell.textLabel?.text = ""
             cell.detailTextLabel?.text = ""
             break
