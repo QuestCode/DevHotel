@@ -8,15 +8,19 @@
 
 *Registration Page*
 
-<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/Registrations_Page1.0.1.png" width="250">
+<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/updated_Registration_Page.png" width="250">
 
-*New Registration Page*
+*Charges Page*
 
-<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/New_Registration_page.png" width="250">
+<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/updated_Charges_Page.png" width="250">
+
+*Add Registration Page*
+
+<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/updated_Add_Regestration_Page.png" width="250">
 
 *Room Type Page*
 
-<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/Room_Type_Page.png" width="250">
+<img src="https://github.com/QuestCode/DevHotel/blob/master/DevHotel/App%20Images/updated_Room_Type_Page.png" width="250">
 
 
 
