@@ -16,6 +16,7 @@
 		2198D3D11FE8614900A0F4A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2198D3CF1FE8614900A0F4A2 /* LaunchScreen.storyboard */; };
 		2198D3F51FE8616C00A0F4A2 /* StructFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2198D3F41FE8616C00A0F4A2 /* StructFiles.swift */; };
 		21BF844E1FEB10F2006C04BC /* ChargesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BF844D1FEB10F2006C04BC /* ChargesTableViewController.swift */; };
+		21BF84501FEB242C006C04BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BF844F1FEB242C006C04BC /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2198D3E21FE8614900A0F4A2 /* DevHotelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevHotelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2198D3F41FE8616C00A0F4A2 /* StructFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructFiles.swift; sourceTree = "<group>"; };
 		21BF844D1FEB10F2006C04BC /* ChargesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargesTableViewController.swift; sourceTree = "<group>"; };
+		21BF844F1FEB242C006C04BC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				2198D3C31FE8614900A0F4A2 /* AppDelegate.swift */,
 				214715F51FE99E2B00D0E83E /* View Controllers */,
 				2198D3F41FE8616C00A0F4A2 /* StructFiles.swift */,
+				21BF844F1FEB242C006C04BC /* Extensions.swift */,
 				2198D3CD1FE8614900A0F4A2 /* Assets.xcassets */,
 				2198D3CF1FE8614900A0F4A2 /* LaunchScreen.storyboard */,
 				2198D3D21FE8614900A0F4A2 /* Info.plist */,
@@ -255,6 +258,7 @@
 				214715FB1FE99E4B00D0E83E /* RegistrationViewController.swift in Sources */,
 				2198D3F51FE8616C00A0F4A2 /* StructFiles.swift in Sources */,
 				2198D3CC1FE8614900A0F4A2 /* DevHotel.xcdatamodeld in Sources */,
+				21BF84501FEB242C006C04BC /* Extensions.swift in Sources */,
 				214715F91FE99E4B00D0E83E /* AddRegistrationTableViewController.swift in Sources */,
 				2198D3C41FE8614900A0F4A2 /* AppDelegate.swift in Sources */,
 				21BF844E1FEB10F2006C04BC /* ChargesTableViewController.swift in Sources */,

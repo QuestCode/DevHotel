@@ -6,6 +6,9 @@
 //  Copyright © 2017 Devontae Reid. All rights reserved.
 //
 
+
+// Need to design tableviews
+
 import UIKit
 
 class RegistrationViewController: UITableViewController, AddRegistrationTableViewControllerDelegate {
@@ -22,7 +25,8 @@ class RegistrationViewController: UITableViewController, AddRegistrationTableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Registrations"
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        self.tableView.register(RegistrationsTableViewCell.self, forCellReuseIdentifier: cellID)
+        self.tableView.separatorColor = UIColor(rgb: 0x39b6d6)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addRegistration(_:)))
         
     }
@@ -49,18 +53,21 @@ class RegistrationViewController: UITableViewController, AddRegistrationTableVie
         return registrations.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellID)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! RegistrationsTableViewCell
         
         let registration = registrations[indexPath.row]
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
         
-        cell.textLabel?.text = registration.firstName + " " + registration.lastName
-        cell.detailTextLabel?.text = dateFormatter.string(from: registration.checkInDate) + " - " + dateFormatter.string(from: registration.checkOutDate) + ": " + registration.roomType.name
+        cell.guestNameLabel.text = registration.firstName + " " + registration.lastName
+        cell.dateLabel.text = "Date: " + dateFormatter.string(from: registration.checkInDate) + " - " + dateFormatter.string(from: registration.checkOutDate)
+        cell.roomTypeLabel.text = "Room Type: " + registration.roomType.name
         
         return cell
     }
@@ -74,17 +81,50 @@ class RegistrationViewController: UITableViewController, AddRegistrationTableVie
 }
 
 
-
-
-
-extension UIView {
-    func addConstraintsWithFormat(format: String, views: UIView...) {
-        var viewsDictionary = [String:UIView]()
-        for (index,view) in views.enumerated() {
-            let key = "v\(index)"
-            viewsDictionary[key] = view
-        }
+class RegistrationsTableViewCell: UITableViewCell {
+    
+    let guestNameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "Copperplate-Bold", size: 26)
+        return label
+    }()
+    
+    let dateLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "Copperplate", size: 14)
+        return label
+    }()
+    
+    let roomTypeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "Copperplate", size: 14)
+        return label
+    }()
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
+        setupViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupViews() {
+        
+        addSubview(guestNameLabel)
+        addSubview(dateLabel)
+        addSubview(roomTypeLabel)
+        
+        addConstraintsWithFormat(format: "H:|-10-[v0]|", views: guestNameLabel)
+        addConstraintsWithFormat(format: "V:|[v0]-30-|", views: guestNameLabel)
+        addConstraintsWithFormat(format: "H:|-10-[v0][v1]-10-|", views: dateLabel,roomTypeLabel)
+        addConstraintsWithFormat(format: "V:[v0]-10-|", views: dateLabel)
+        addConstraintsWithFormat(format: "V:[v0]-10-|", views: roomTypeLabel)
     }
 }
+
