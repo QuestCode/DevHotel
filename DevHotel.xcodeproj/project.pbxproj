@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		210943DF1FEB62B4007573B9 /* FlashyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210943DE1FEB62B4007573B9 /* FlashyTextField.swift */; };
+		2133A9C01FEEFA0D0092D6CA /* PullStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133A9BF1FEEFA0C0092D6CA /* PullStepper.swift */; };
 		214715F91FE99E4B00D0E83E /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214715F61FE99E4B00D0E83E /* AddRegistrationTableViewController.swift */; };
 		214715FA1FE99E4B00D0E83E /* SelectRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214715F71FE99E4B00D0E83E /* SelectRoomTableViewController.swift */; };
 		214715FB1FE99E4B00D0E83E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214715F81FE99E4B00D0E83E /* RegistrationViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		210943DE1FEB62B4007573B9 /* FlashyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashyTextField.swift; sourceTree = "<group>"; };
+		2133A9BF1FEEFA0C0092D6CA /* PullStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullStepper.swift; sourceTree = "<group>"; };
 		214715F61FE99E4B00D0E83E /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
 		214715F71FE99E4B00D0E83E /* SelectRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRoomTableViewController.swift; sourceTree = "<group>"; };
 		214715F81FE99E4B00D0E83E /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		210943DD1FEB626B007573B9 /* UI Designs */ = {
 			isa = PBXGroup;
 			children = (
+				2133A9BF1FEEFA0C0092D6CA /* PullStepper.swift */,
 				210943DE1FEB62B4007573B9 /* FlashyTextField.swift */,
 			);
 			path = "UI Designs";
@@ -274,6 +277,7 @@
 				2198D3C41FE8614900A0F4A2 /* AppDelegate.swift in Sources */,
 				210943DF1FEB62B4007573B9 /* FlashyTextField.swift in Sources */,
 				21BF844E1FEB10F2006C04BC /* ChargesTableViewController.swift in Sources */,
+				2133A9C01FEEFA0D0092D6CA /* PullStepper.swift in Sources */,
 				214715FA1FE99E4B00D0E83E /* SelectRoomTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
